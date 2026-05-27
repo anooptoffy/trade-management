@@ -1,0 +1,2 @@
+# No external Python dependencies required for the starter HS Classification skill.
+python>=3.10
