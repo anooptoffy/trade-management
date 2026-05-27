@@ -1,4 +1,4 @@
-# GTM
+# Trade Management
 
 Global Trade Management use cases and reference materials.
 

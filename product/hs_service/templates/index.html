@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HS Classification — Demo</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <main>
+    <h1>HS Classification — Demo</h1>
+    <form id="classify-form">
+      <fieldset>
+        <legend>Product Details</legend>
+        <label>Product name *
+          <input type="text" name="product_name" required />
+        </label>
+        <label>Product description
+          <textarea name="product_description"></textarea>
+        </label>
+        <label>Product attributes
+          <input type="text" name="product_attributes" placeholder="comma separated (e.g. leather upper, retail pack)" />
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Material & Origin</legend>
+        <label>Primary material
+          <select name="material">
+            <option value="">-- Select or leave blank --</option>
+            <option value="leather">Leather</option>
+            <option value="synthetic">Synthetic</option>
+            <option value="cotton">Cotton</option>
+            <option value="polyester">Polyester</option>
+            <option value="metal">Metal</option>
+            <option value="plastic">Plastic</option>
+            <option value="wood">Wood</option>
+            <option value="rubber">Rubber</option>
+            <option value="ceramic">Ceramic</option>
+          </select>
+        </label>
+        <label>Origin country
+          <input type="text" name="origin_country" placeholder="e.g. Vietnam, China, Germany" />
+        </label>
+        <label>Weight (kg)
+          <input type="number" name="weight_kg" step="0.1" placeholder="e.g. 2.5" />
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Trade Details</legend>
+        <label>Country of import/export *
+          <input type="text" name="country" required placeholder="e.g. Germany, United States" />
+        </label>
+        <label>Trade direction
+          <select name="trade_direction">
+            <option value="import">Import</option>
+            <option value="export">Export</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <button type="submit">Classify Product</button>
+    </form>
+
+    <section id="result" aria-live="polite">
+      <h2>Classification Result</h2>
+      <pre id="json-output">No result yet.</pre>
+    </section>
+  </main>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
