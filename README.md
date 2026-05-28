@@ -35,10 +35,16 @@ trade-management/
 │           └── js/
 │               └── app.js        # Form handling
 └── skills/
-    └── hs-classification/        # HS Classification skill
+    ├── hs-classification/        # HS Classification skill
+    │   ├── SKILL.md              # Skill documentation
+    │   └── scripts/
+    │       └── generate_hs_code.py # Core classification engine
+    └── webscraping/              # Web scraping enrichment skill
         ├── SKILL.md              # Skill documentation
-        └── scripts/
-            └── generate_hs_code.py # Core classification engine
+        ├── scripts/
+        │   └── scraper_helpers.py # Scraping and validation helpers
+        └── references/
+            └── scraping-sources.md # Web scraping patterns and examples
 ```
 
 ## Quick Start
